@@ -1,0 +1,19 @@
+--- pvemanagerlib.js
++++ /usr/share/pve-manager/js/pvemanagerlib.js	2025-08-10 12:42:22.621710867 +1000
+@@ -57429,6 +57429,16 @@
+         },
+         {
+             xtype: 'proxmoxcheckbox',
++            name: 'orchestration',
++            uncheckedValue: null,
++            checked: false,
++            fieldLabel: gettext('Orchestration'),
++            cbind: {
++                deleteEmpty: '{!isCreate}',
++            },
++        },
++        {
++            xtype: 'proxmoxcheckbox',
+             itemId: 'sdnVnetVlanAwareField',
+             name: 'vlanaware',
+             uncheckedValue: null,
