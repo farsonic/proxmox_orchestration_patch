@@ -1,0 +1,23 @@
+diff --git a/src/PVE/Network/SDN/VnetPlugin.pm b/src/PVE/Network/SDN/VnetPlugin.pm
+index 58e177b..c0ffee1 100644
+--- a/src/PVE/Network/SDN/VnetPlugin.pm
++++ b/src/PVE/Network/SDN/VnetPlugin.pm
+@@ -84,6 +84,10 @@ sub properties {
+         'isolate-ports' => {
+             type => 'boolean',
+             description => "If true, sets the isolated property for all members of this VNet",
+         },
++        orchestration => {
++            type => 'boolean',
++            description => "Enable orchestration hooks/behavior for this VNet.",
++        },
+     };
+ }
+
+@@ -95,6 +99,7 @@ sub options {
+         alias => { optional => 1 },
+         vlanaware => { optional => 1 },
+         'isolate-ports' => { optional => 1 },
++        orchestration => { optional => 1 },
+     };
+ }
